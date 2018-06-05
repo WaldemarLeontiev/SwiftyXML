@@ -263,7 +263,8 @@ open class XML {
             if let xml = parser.root {
                 self.init(xml: xml)
             } else {
-                fatalError("xml parser exception")
+                print("xml parser exception")
+                return nil
             }
         } catch {
             print(error.localizedDescription)
